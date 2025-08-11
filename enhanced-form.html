@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #aaa;
+        }
+
+        input[readonly] {
+            background-color: #eee;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            text-align: left;
+            padding: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Enhanced HTML5 Form Example</h1>
+        <p>This page demonstrates a well-structured HTML5 document containing lists, tables, media, and a complete form
+            with validation and accessibility features.</p>
+    </header>
+
+    <main>
+        <!-- Example of a List -->
+        <section>
+            <h2>Available Courses</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Data Science</li>
+                <li>Cybersecurity</li>
+                <li>Digital Marketing</li>
+            </ul>
+        </section>
+
+        <!-- Example of a Table -->
+        <section>
+            <h2>Price List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>12 Weeks</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr>
+                        <td>Data Science</td>
+                        <td>16 Weeks</td>
+                        <td>$800</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity</td>
+                        <td>10 Weeks</td>
+                        <td>$600</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Example of Media -->
+        <section>
+            <h2>Promotional Video</h2>
+            <video controls width="100%">
+                <source src="promo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Complete HTML5 Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">--Select Country--</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="india">India</option>
+                    </select>
+
+                    <label for="userid">User ID (Readonly):</label>
+                    <input type="text" id="userid" name="userid" value="USR12345" readonly>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Setup</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a strong password" required
+                        minlength="6">
+
+                    <label for="website">Website (Optional):</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+
+                    <label for="bio">Short Bio:</label>
+                    <textarea id="bio" name="bio" placeholder="Tell us a little about yourself..."
+                        maxlength="250"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label>Subscribe to Newsletter:
+                        <input type="checkbox" name="newsletter" value="yes">
+                    </label>
+
+                    <label>Preferred Contact Method:</label>
+                    <label><input type="radio" name="contact" value="email" required> Email</label>
+                    <label><input type="radio" name="contact" value="phone" required> Phone</label>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Enhanced Form Demo. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
